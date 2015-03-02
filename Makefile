@@ -103,4 +103,7 @@ install:
 
 	install -d $(DESTDIR)/usr/share/plymouth/themes/joy
 	$(INSTALL) $(wildcard plymouth/joy/*) $(DESTDIR)/usr/share/plymouth/themes/joy
+
+	install -d $(DESTDIR)/usr/share/plymouth/themes/archeos
+	$(INSTALL) $(wildcard plymouth/archeos/*) $(DESTDIR)/usr/share/plymouth/themes/archeos
 	
