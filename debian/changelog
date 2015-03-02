@@ -1,3 +1,13 @@
+desktop-base (1:5.0archeos1) theodoric; urgency=medium
+
+  * changelog
+  * changelog
+  * changelog
+  * added README
+  * svg image
+
+ -- Fabrizio Furnari <fab.furnari@gmail.com>  Mon, 02 Mar 2015 17:44:47 +0100
+
 desktop-base (1:5.0archeos0) theodoric; urgency=medium
 
   [ fabrizio Furnari ]
