@@ -1,7 +1,9 @@
 desktop-base (1:5.0archeos0) theodoric; urgency=medium
-	
+
   [ fabrizio Furnari ]
   * Initial
+
+ -- Fabrizio Furnari <fab.furnari@gmail.com>  Wed, 02 mar 2015 13:40:42 +0100
 
 desktop-base (7.0.3) unstable; urgency=low
 
