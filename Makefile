@@ -25,7 +25,7 @@ install:
 	# desktop files
 	mkdir -p $(DESTDIR)/usr/share/desktop-base
 	$(INSTALL) $(DESKTOPFILES) $(DESTDIR)/usr/share/desktop-base/
-	$(INSTALL) $(GDMLOGIN) $(DESTDIR)/usr/share/desktop-base/)))
+	$(INSTALL) $(GDMLOGIN) $(DESTDIR)/usr/share/desktop-base/
 	# pixmaps files
 	mkdir -p $(DESTDIR)/usr/share/pixmaps
 	$(INSTALL) $(PIXMAPS) $(DESTDIR)/usr/share/pixmaps/
