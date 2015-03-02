@@ -2,7 +2,7 @@
 <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
 <wallpapers>
   <wallpaper>
-    <name>Kali</name>
+    <name>ArcheOS</name>
     <filename>/usr/share/images/desktop-base/archeos.xml</filename>
     <options>zoom</options>
     <shade_type>horizontal-gradient</shade_type>
@@ -27,4 +27,5 @@
     <scolor>#006699</scolor>
   </wallpaper>
 </wallpapers>
+
 

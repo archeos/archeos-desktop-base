@@ -3,6 +3,7 @@ DEFAULT_BACKGROUND=desktop-background
 INSTALL=install -m 0644
 BACKGROUNDS=$(wildcard backgrounds/*.png backgrounds/*.jpg backgrounds/*.svg backgrounds/*.tga backgrounds/*.xml)
 EMBLEMS=$(wildcard emblems/*png emblems/*icon)
+GDMLOGIN=$(wildcard gdm3/login/*.png)
 SPLASH=$(wildcard splash/*.png splash/*.svg)
 PIXMAPS=$(wildcard pixmaps/*.png)
 DESKTOPFILES=$(wildcard *.desktop)
@@ -24,6 +25,7 @@ install:
 	# desktop files
 	mkdir -p $(DESTDIR)/usr/share/desktop-base
 	$(INSTALL) $(DESKTOPFILES) $(DESTDIR)/usr/share/desktop-base/
+	$(INSTALL) $(GDMLOGIN) $(DESTDIR)/usr/share/desktop-base/)))
 	# pixmaps files
 	mkdir -p $(DESTDIR)/usr/share/pixmaps
 	$(INSTALL) $(PIXMAPS) $(DESTDIR)/usr/share/pixmaps/
@@ -50,6 +52,13 @@ install:
 	$(INSTALL) kde-wallpaper/joy_inksplat/contents/screenshot.png $(DESTDIR)/usr/share/wallpapers/joy_inksplat/contents/
 	mkdir -p $(DESTDIR)/usr/share/wallpapers/joy_inksplat/contents/images
 	$(INSTALL) $(wildcard kde-wallpaper/joy_inksplat/contents/images/*) $(DESTDIR)/usr/share/wallpapers/joy_inksplat/contents/images/
+	# ArcheOS
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/archeos
+	#$(INSTALL) kde-wallpaper/archeos/metadata.desktop $(DESTDIR)/usr/share/wallpapers/archeos/
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/archeos/contents
+	#$(INSTALL) kde-wallpaper/archeos/contents/screenshot.png $(DESTDIR)/usr/share/wallpapers/archeos/contents/
+	mkdir -p $(DESTDIR)/usr/share/wallpapers/archeos/contents/images
+	#$(INSTALL) $(wildcard kde-wallpaper/archeos/contents/images/*) $(DESTDIR)/usr/share/wallpapers/archeos/contents/images/
 
 
 
@@ -58,6 +67,10 @@ install:
 	$(INSTALL) kdm-theme/kdm.d/10_desktop-base $(DESTDIR)/etc/default/kdm.d
 	mkdir -p $(DESTDIR)/usr/share/kde4/apps/kdm/themes/joy
 	$(INSTALL) $(wildcard kdm-theme/joy/*) $(DESTDIR)/usr/share/kde4/apps/kdm/themes/joy
+	# Archeos
+	mkdir -p $(DESTDIR)/usr/share/kde4/apps/kdm/themes/archeos
+	#$(INSTALL) $(wildcard kdm-theme/archeos/*) $(DESTDIR)/usr/share/kde4/apps/kdm/themes/archeos
+
 
 	# KSPLASH theme
 	install -d $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy
@@ -77,6 +90,10 @@ install:
 	$(INSTALL) $(wildcard ksplash-theme/joy/1920x1080/*) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1920x1080
 	install -d $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1920x1200
 	$(INSTALL) $(wildcard ksplash-theme/joy/1920x1200/*) $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/joy/1920x1200
+	# Archeos
+	mkdir -p $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/archeos
+	#cp -a ksplash-theme/archeos/* $(DESTDIR)/usr/share/kde4/apps/ksplash/Themes/archeos/
+
 
 
 	# Xfce 4.6
@@ -87,7 +104,7 @@ install:
 	$(INSTALL) gnome-backgrounds.xml $(DESTDIR)/usr/share/gnome-background-properties/debian.xml
 	# GDM 3 theme
 	mkdir -p $(DESTDIR)/usr/share/gdm/dconf
-	$(INSTALL) gdm3/background.svg $(DESTDIR)/usr/share/images/desktop-base/login-background.png
+	$(INSTALL) gdm3/background.png $(DESTDIR)/usr/share/images/desktop-base/login-background.png
 	$(INSTALL) gdm3/10-desktop-base-settings $(DESTDIR)/usr/share/gdm/dconf/
 
 	# grub
