@@ -19,6 +19,12 @@ if [ "$1" = "configure" -o "$1" = "abort-upgrade" ]; then
             desktop-background \
             /usr/share/images/desktop-base/$background $priority
     done << EOF
+kali-wallpaper_1024x768.png 70
+kali-wallpaper_1600x1200.png 70
+kali-wallpaper_1280x1024.png 70
+kali-wallpaper_1280x800.png 70
+kali-wallpaper_1920x1080.png 75
+kali-wallpaper_1920x1200.png 70
 joy-wallpaper_1600x1200.svg 65
 joy-wallpaper_1280x1024.svg 65
 joy-wallpaper_1920x1080.svg 70
@@ -38,6 +44,10 @@ EOF
         /usr/share/images/desktop-base/desktop-background.xml \
         desktop-background.xml \
         /usr/share/images/desktop-base/joy.xml 10
+    update-alternatives --install \
+        /usr/share/images/desktop-base/desktop-background.xml \
+        desktop-background.xml \
+        /usr/share/images/desktop-base/archeos.xml 20
 
     # Alternatives for the splash
     while read splash priority; do

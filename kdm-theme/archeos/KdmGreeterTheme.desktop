@@ -1,0 +1,8 @@
+[KdmGreeterTheme]
+Encoding=UTF-8
+Greeter=archeos.xml
+Name=ArcheOS
+Description=ArcheOS KDM Theme
+Author=None
+Copyright=None
+Screenshot=screenshot.png
