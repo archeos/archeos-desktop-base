@@ -1,5 +1,5 @@
 [org/gnome/desktop/background]
-picture-uri='file:///usr/share/images/desktop-base/login-background.png'
+picture-uri='file:///usr/share/images/desktop-base/login-background.svg'
 picture-options='zoom'
 [org.gnome.login-screen]
 logo='/usr/share/desktop-base/archeos-logo.png'
